@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: #e8a33d;
+  color: #14181c;
+}
+
+/* visible, consistent keyboard focus ring across the site */
+:focus-visible {
+  outline: 2px solid #e8a33d;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+body {
+  font-feature-settings: 'ss01' on, 'ss02' on;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
